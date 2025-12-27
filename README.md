@@ -39,24 +39,22 @@ Welcome to **Heads Up Game** – a colorful, interactive coin-flipping puzzle bu
 ---
 
 ## 📂 Project Structure
-
+```text
 heads-up-game/
-│
-├── index.html # Main game page
+├── index.html                 # Main game page
 ├── css/
-│ └── style.css # Game styles
+│   └── style.css              # Game styles
 ├── js/
-│ └── game.js # Game logic
-├── assets/ # Sounds & images
-│ ├── flip.wav
-│ ├── you-win-sfx-442128.mp3
-│ └── christmas-background-music-452092.mp3
-├── LICENSE # MIT License
-└── README.md # This file
+│   └── game.js                # Game logic
+├── assets/                    # Sounds & images
+│   ├── flip.wav
+│   ├── you-win-sfx-442128.mp3
+│   └── christmas-background-music-452092.mp3
+├── LICENSE                    # MIT License
+└── README.md                  # This file
 
-
----
-
+--- 
+```
 ## 🎵 Audio / Assets
 - Flip sound 🔊: `flip.wav`  
 - Win sound 🎉: `you-win-sfx-442128.mp3`  
@@ -67,7 +65,7 @@ heads-up-game/
 ---
 
 ## 🚀 Live Demo
-This is the link: [ADD LINK HERE]  
+This is the link: [https://adil-amin-chishty.github.io/Heads-up-Game/}  
 
 ---
 
