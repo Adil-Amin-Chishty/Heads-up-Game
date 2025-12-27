@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Heads Up Game</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="container">
+    <header class="header">
+        <h1>🎮 Heads Up Game</h1>
+        <p class="subtitle">Flip consecutive coins to make all Heads</p>
+    </header>
+
+    <div class="top-row">
+        <div class="spacer"></div>
+        <div class="audio-controls">
+            <button id="musicToggleBtn" class="chip-button">🎵 Music: Off</button>
+            <label class="volume-slider">
+                <span>Volume</span>
+                <input type="range" id="musicVolumeSlider" min="0" max="100" value="25">
+            </label>
+        </div>
+    </div>
+
+    <main>
+        <section id="mainMenu" class="panel">
+            <h2 class="panel-title">Main Menu</h2>
+            <p class="panel-subtitle">Choose an option to begin your session.</p>
+            <div class="main-menu-buttons">
+                <button id="startGameBtn" class="btn-primary">▶ Start Game</button>
+                <button id="rulesBtn" class="btn-secondary">📜 Rules</button>
+                <button id="quitBtn" class="btn-tertiary">🚪 Quit Game</button>
+            </div>
+        </section>
+
+        <section id="rulesPanel" class="panel hidden">
+            <h2 class="panel-title">How to Play</h2>
+            <ul class="rules-list">
+                <li>🎯 <strong>Goal</strong>: Turn all coins to <strong>Heads (H)</strong>.</li>
+                <li>🖱️ <strong>Select</strong>: Click and drag across consecutive coins to select them.</li>
+                <li>🔄 <strong>Flip</strong>: Release the mouse to flip all selected coins at once.</li>
+                <li>📊 <strong>Moves</strong>: Try to match or beat the <strong>Optimal</strong> number of moves.</li>
+                <li>🤖 <strong>Auto-Solve</strong>: Stuck? Let the game show you one optimal solution.</li>
+            </ul>
+            <div class="rules-buttons">
+                <button id="rulesBackBtn" class="btn-secondary">⬅ Back to Menu</button>
+                <button id="rulesStartBtn" class="btn-primary">▶ Start Game</button>
+            </div>
+        </section>
+
+        <section id="gamePanel" class="panel hidden">
+            <div class="difficulty">
+                Difficulty:
+                <select id="difficultySelect">
+                    <option value="10">Easy (10 coins)</option>
+                    <option value="15">Medium (15 coins)</option>
+                    <option value="20">Hard (20 coins)</option>
+                    <option value="100">God Level (100 coins)</option>
+                </select>
+            </div>
+
+            <div id="game"></div>
+
+            <div class="info">
+                <div>Moves: <span id="moves">0</span></div>
+                <div>Optimal: <span id="minMoves">0</span></div>
+                <div>Score: <span id="score">0</span> ⭐</div>
+            </div>
+
+            <div class="buttons">
+                <button id="restartBtn">🔄 Restart Game</button>
+                <button id="autoSolveBtn">🤖 Auto-Solve</button>
+                <button id="continueBtn">⭐ Continue</button>
+                <button id="backToMenuBtn" class="btn-secondary-inline">🏠 Main Menu</button>
+            </div>
+
+            <div id="winMessage">🎉 Congratulations! You Won 🎉</div>
+        </section>
+
+        <section id="quitPanel" class="panel hidden">
+            <h2 class="panel-title">Quit Game</h2>
+            <p class="panel-subtitle">
+                Thanks for playing! You can safely close this tab or window at any time.
+            </p>
+            <button id="quitBackBtn" class="btn-secondary">⬅ Back to Menu</button>
+        </section>
+    </main>
+</div>
+
+<!-- Audio -->
+<audio id="flipSound" src="assets/flip.wav.mp3"></audio>
+<audio id="winSound" src="assets/you-win-sfx-442128.mp3"></audio>
+<audio id="bgMusic" src="assets/christmas-background-music-452092.mp3" loop></audio>
+
+<script src="js/game.js"></script>
+</body>
+</html>
